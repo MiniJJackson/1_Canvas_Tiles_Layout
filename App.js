@@ -3,16 +3,32 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container}>{/* scrollview-container that allows you to scroll */}
+      {/* need a NAV here */}
       <Text style={styles.header1}>Courses</Text>
+
+      {/* start tilesContainer */}
       <View style={styles.tilesContainer}>
+        
+        {/* tile nr.1 */}
         <View styles={styles.tile}>
           <Image style={styles.tileImage} source={require('./assets/courseImages/macbook-code.jpg')}/>
           <View style={styles.tileDetail}>
             <Text style={styles.tileHeader}>Development 1</Text>
             <Text style={styles.tileText}>(YP0584 | 2022)</Text>
           </View>
-        </View> 
+        </View>
+
+        {/* tile nr.2 */}
+        <View styles={styles.tile}>
+          <Image style={styles.tileImage} source={require('./assets/courseImages/sensors.jpg')}/>
+          <View style={styles.tileDetail}>
+            <Text style={styles.tileHeader}>Development 2</Text>
+            <Text style={styles.tileText}>(YP0859 | 2022)</Text>
+          </View>
+        </View>
+
+        {/* end tilesContainer */} 
       </View>
 
     </ScrollView>
